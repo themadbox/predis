@@ -250,6 +250,11 @@ class ServerVersion28 extends ServerProfile
             'pfadd'                     => 'Predis\Command\HyperLogLogAdd',
             'pfcount'                   => 'Predis\Command\HyperLogLogCount',
             'pfmerge'                   => 'Predis\Command\HyperLogLogMerge',
+
+            // bobby GEO-REDIS
+            'geoadd'					=> 'Predis\Command\GeoAdd',
+            'georadius'					=> 'Predis\Command\GeoRadius',
+            'georadiusbymember'					=> 'Predis\Command\GeoRadiusByMember',
         );
     }
 }
