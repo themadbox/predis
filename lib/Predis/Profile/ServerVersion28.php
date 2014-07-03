@@ -254,7 +254,7 @@ class ServerVersion28 extends ServerProfile
             // bobby GEO-REDIS
             'geoadd'					=> 'Predis\Command\GeoAdd',
             'georadius'					=> 'Predis\Command\GeoRadius',
-            'georadiusbymember'					=> 'Predis\Command\GeoRadiusByMember',
+            'georadiusbymember'			=> 'Predis\Command\GeoRadiusByMember',
         );
     }
 }

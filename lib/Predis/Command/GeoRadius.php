@@ -63,6 +63,8 @@ class GeoRadius extends PrefixableCommand
 				else
 					$normalized[] = 'ascending';
 			}
+			else
+				$normalized[] = 'ascending';
         }
 
         //var_dump($normalized); die;
@@ -73,21 +75,10 @@ class GeoRadius extends PrefixableCommand
     /**
      * {@inheritdoc}
      */
+    /*
     public function parseResponse($data)
     {
-		var_dump($data); die;
-        if (is_array($data)) {
-            $data[0] = (int) $data[0];
-            $fields = $data[1];
-            $result = array();
-
-            for ($i = 0; $i < count($fields); $i++) {
-                $result[$fields[$i]] = $fields[++$i];
-            }
-
-            $data[1] = $result;
-        }
-
-        return $data;
+		return $data;
     }
+    */
 }

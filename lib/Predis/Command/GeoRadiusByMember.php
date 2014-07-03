@@ -51,13 +51,9 @@ class GeoRadiusByMember extends PrefixableCommand
 				$normalized[] = $options['DISTANCE_UNIT_MISURE'];
 			else
 				$normalized[] = 'km';
-
-
+				
             if (!empty($options['WITHDISTANCE']) && $options['WITHDISTANCE'] === TRUE)
 				$normalized[] = 'withdistance';
-
-            if (!empty($options['GEOJSON']) && $options['GEOJSON'] === TRUE)
-				$normalized[] = 'withgeojson';
 
             if (!empty($options['GEOJSON']) && in_array($options['GEOJSON'],array('json','jsoncollection')))
 				$normalized[] = sprintf('withgeo%s',$options['GEOJSON']);
@@ -69,6 +65,8 @@ class GeoRadiusByMember extends PrefixableCommand
 				else
 					$normalized[] = 'ascending';
 			}
+			else
+				$normalized[] = 'ascending';
         }
 
         //var_dump($normalized); die;
@@ -79,21 +77,10 @@ class GeoRadiusByMember extends PrefixableCommand
     /**
      * {@inheritdoc}
      */
+    /*
     public function parseResponse($data)
     {
-		var_dump($data); die;
-        if (is_array($data)) {
-            $data[0] = (int) $data[0];
-            $fields = $data[1];
-            $result = array();
-
-            for ($i = 0; $i < count($fields); $i++) {
-                $result[$fields[$i]] = $fields[++$i];
-            }
-
-            $data[1] = $result;
-        }
-
-        return $data;
+		return $data;
     }
+    */
 }
