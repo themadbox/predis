@@ -1,15 +1,14 @@
 {
-    "name": "predis/predis",
+    "name": "themadbox/predis",
     "type": "library",
-    "description": "Flexible and feature-complete PHP client library for Redis",
-    "keywords": ["nosql", "redis", "predis"],
-    "homepage": "http://github.com/nrk/predis",
+    "description": "Fork to add GeoRedis - Flexible and feature-complete PHP client library for Redis",
+    "keywords": ["nosql", "redis", "predis", "geo-redis"],
+    "homepage": "https://github.com/themadbox/predis",
     "license": "MIT",
     "authors": [
         {
-            "name": "Daniele Alessandri",
-            "email": "suppakilla@gmail.com",
-            "homepage": "http://clorophilla.net"
+            "name": "BobbyGallo",
+            "email": "r.galli@themadbox.com"
         }
     ],
     "require": {
