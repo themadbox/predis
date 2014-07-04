@@ -50,11 +50,13 @@ class GeoRadius extends PrefixableCommand
 			if (!empty($options['DISTANCE_UNIT_MISURE']) && in_array($options['DISTANCE_UNIT_MISURE'], array('m','km','mi')))
 				$normalized[] = $options['DISTANCE_UNIT_MISURE'];
 			else
-				$normalized[] = 'km';
-
+				$normalized[] = 'm';
 
             if (!empty($options['WITHDISTANCE']) && $options['WITHDISTANCE'] === TRUE)
 				$normalized[] = 'withdistance';
+
+			if (!empty($options['GEOJSON']) && in_array($options['GEOJSON'],array('json','jsoncollection')))
+				$normalized[] = sprintf('withgeo%s',$options['GEOJSON']);
 
             if (!empty($options['SORT']))
             {
